@@ -1,6 +1,5 @@
 package com.github.aliakseikaraliou.musicservice.db.entity
 
-import java.time.LocalDate
 import javax.persistence.*
 
 @Entity
@@ -13,7 +12,4 @@ class SongDB(
 
     @Column(name = "title")
     val title: String,
-
-    @Column(name = "release-date")
-    val releaseDate: LocalDate
 ) : EntityDB()

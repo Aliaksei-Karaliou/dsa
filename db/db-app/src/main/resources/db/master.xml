@@ -8,5 +8,10 @@
     <include file="1.0/create-table-band.xml" relativeToChangelogFile="true"/>
     <include file="1.0/create-table-song.xml" relativeToChangelogFile="true"/>
     <include file="1.0/create-table-properties.xml" relativeToChangelogFile="true"/>
-
+    <include file="1.0/create-table-band-song.xml" relativeToChangelogFile="true"/>
+    <include file="1.0/create-table-person-song.xml" relativeToChangelogFile="true"/>
+    <include file="1.0/create-table-song-song.xml" relativeToChangelogFile="true"/>
+    <include file="1.0/create-table-album.xml" relativeToChangelogFile="true"/>
+    <include file="1.0/create-table-album-band.xml" relativeToChangelogFile="true"/>
+    <include file="1.0/create-table-album-person.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

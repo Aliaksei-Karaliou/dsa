@@ -1,6 +1,6 @@
 package com.github.aliakseikaraliou.musicservice.db.entity
 
-import org.hibernate.Hibernate
+import com.github.aliakseikaraliou.musicservice.db.entity.relationship.AlbumBand
 import java.util.*
 import javax.persistence.*
 
@@ -19,7 +19,10 @@ class PersonDB(
     val isActive: Boolean,
 
     @Column(name = "description")
-    val description: String?
+    val description: String?,
+
+    @OneToMany
+    val albums: List<AlbumBand>
 ) : EntityDB() {
     override fun hashCode(): Int = Objects.hash(id, name, isActive, description)
 

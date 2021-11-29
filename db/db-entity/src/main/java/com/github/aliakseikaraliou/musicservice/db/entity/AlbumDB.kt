@@ -4,8 +4,8 @@ import com.github.aliakseikaraliou.musicservice.db.entity.relationship.AlbumBand
 import javax.persistence.*
 
 @Entity
-@Table(name = "band")
-class BandDB(
+@Table(name = "album")
+class AlbumDB(
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,12 +14,10 @@ class BandDB(
     @Column(name = "name")
     val name: String,
 
-    @Column(name = "is_active")
-    val isActive: Boolean,
-
-    @Column(name = "description")
-    val description: String?,
+    @OneToMany
+    val bands: List<AlbumBand>,
 
     @OneToMany
-    val albums: List<AlbumBand>
+    val persons: List<AlbumBand>
+
 ) : EntityDB()

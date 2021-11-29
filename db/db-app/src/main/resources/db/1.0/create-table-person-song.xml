@@ -1,0 +1,24 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet id="create-table-person-song" author="akaraliou">
+        <createTable tableName="person-song">
+            <column name="song" type="int">
+                <constraints nullable="false" foreignKeyName="fk_song_person_song" referencedColumnNames="song(id)"/>
+            </column>
+            <column name="person" type="int">
+                <constraints nullable="false" foreignKeyName="fk_song_person_person"
+                             referencedColumnNames="person(id)"/>
+            </column>
+            <column name="type" type="varchar(10)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!--    paricipants-->
+
+</databaseChangeLog>
