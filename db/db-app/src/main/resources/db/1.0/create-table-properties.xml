@@ -1,0 +1,19 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet id="create-table-properties" author="akaraliou">
+        <createTable tableName="properties">
+            <column name="application" type="text"/>
+            <column name="profile" type="text"/>
+            <column name="label" type="text"/>
+            <column name="key" type="text"/>
+            <column name="value" type="text"/>
+        </createTable>
+    </changeSet>
+
+    <!--    artist,band,genre,album,song-->
+
+</databaseChangeLog>

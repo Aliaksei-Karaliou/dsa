@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: db
+  config:
+    import: configserver:http://eureka-config-server:9001/
+  application:
+    name: app
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: eureka-config-server
+      fail-fast: true
+
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/

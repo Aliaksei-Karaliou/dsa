@@ -1,0 +1,25 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: eureka-config-server
+
+  profiles:
+    active: jdbc
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/music
+    username: admin
+    password: password
+
+  cloud:
+    config:
+      server:
+        jdbc:
+          order: '1'
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
